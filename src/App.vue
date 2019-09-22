@@ -1,53 +1,25 @@
 <template>
   <div id="app">
     <Header/>
-    <AddTodo v-on:add-todo="addTodo"/>
-    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
+    <Sidebar/>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import Header from './components/layout/Header'
-import Todos from './components/Todos';
-import AddTodo from './components/AddTodo';
 
+<script>
+import Header from './components/layout/Header';
+import Sidebar from './components/layout/Sidebar';
+import VueSidebarMenu from 'vue-sidebar-menu';
 export default {
-  name: 'app',
-  components: {
+  name:"app",
+  components:{
     Header,
-    Todos,
-    AddTodo
-  },
-  data(){
-    return {
-      todos: [
-        {
-          id: 1,
-          title: "Todo One",
-          completed: false
-        },
-        {
-          id: 2,
-          title: "Todo Two",
-          completed: true
-        },{
-          id: 3,
-          title: "Todo Three",
-          completed: false
-        }
-      ]
-    }
-  },
-  methods:{
-    deleteTodo(id){
-      this.todos = this.todos.filter(todo => todo.id !== id);
-    },
-    addTodo(newTodo){
-      this.todos = [...this.todos, newTodo];
-    }
+    Sidebar
   }
 }
 </script>
+
 
 <style>
   *{
