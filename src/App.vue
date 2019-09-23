@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <Sidebar/>
+    <Sidebar class="v-sidebar-menu"/>
     <router-view/>
   </div>
 </template>
@@ -15,7 +15,14 @@ export default {
   components:{
     Header,
     Sidebar
-  }
+  },
+  //props: {
+      // Sidebar Collapse state
+  //    collapsed: {
+  //    type: Boolean,
+  //    default: true
+  //    }
+  //}
 }
 </script>
 
@@ -43,5 +50,12 @@ export default {
 
   .btn:hover{
     background: #666;
+  }
+
+  .v-sidebar-menu.vsm_expanded {
+      width:25%;
+  }
+  .v-sidebar-menu.vsm_collapsed {
+      width:15%;
   }
 </style>

@@ -32,6 +32,13 @@
                     }
                 ]
             }
+        },
+        props: {
+            // Sidebar Collapse state
+            collapsed: {
+            type: Boolean,
+            default: true
+            }
         }
     }
 </script>
