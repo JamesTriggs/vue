@@ -10,7 +10,6 @@
 <script>
 import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
-import VueSidebarMenu from 'vue-sidebar-menu';
 export default {
   name:"app",
   components:{

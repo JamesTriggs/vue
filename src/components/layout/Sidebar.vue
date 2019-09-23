@@ -19,7 +19,8 @@
                         icon: 'fa fa-user'
                     },
                     {
-                        href: '/charts',
+                        to:"/about",
+                        //href: '/charts',
                         title: 'Charts',
                         icon: 'fa fa-chart-area',
                         child: [
@@ -34,3 +35,7 @@
         }
     }
 </script>
+
+<style>
+
+</style>
